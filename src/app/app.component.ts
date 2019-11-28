@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-app",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
-export class AppComponent {
-  title = 'workshop';
+export class AppComponent implements OnInit {
+
+
+  menuItems = [
+    { url: "/", name: "Home" },
+    { url: "/workshops", name: "List of workshops" }
+  ];
+
+
+
+  constructor() {}
+
+  ngOnInit() {}
 }
